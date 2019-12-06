@@ -1,0 +1,73 @@
+laba_2_1=[*
+
+sc_node_not_relation ->concept_graphics_card;;
+sc_node_not_relation ->concept_monitor_screen;;
+sc_node_not_relation ->concept_graphics_view;;
+sc_node_not_relation ->concept_device;;
+sc_node_not_relation ->concept_GPGPU;;
+sc_node_not_relation ->concept_discrete_graphics_card;;
+sc_node_not_relation ->concept_integrated_graphics_processors;;
+sc_node_not_relation ->concept_hybrid_solutions;;
+sc_node_not_relation ->concept_external_graphics_card;;
+sc_node_not_relation ->concept_Inno_3D_GeForce_RTX_2080_Ti;;
+sc_node_not_relation ->concept_serial_number;;
+
+
+
+
+
+sc_node_norole_relation ->nrel_conversion;;
+sc_node_norole_relation ->nrel_fit_form;;
+sc_node_norole_relation ->nrel_output;;
+sc_node_norole_relation ->nrel_number;;
+
+
+//identificator
+concept_graphics_card=> nrel_main_idtf: [Видеокарта](* <- lang_ru;; *);;
+concept_graphics_card=> nrel_main_idtf: [graphics card](* <- lang_en;; *);;
+
+
+//opredelenie
+definition ->...
+(*
+->rrel_key_sc_element: concept_graphics_card;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Видеокарта -это устройство, преобразующее графический образ в пригодную для вывода на экран монитора форму](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Определение (Видеокарта)](*<- lang_ru;;*);;
+=> nrel_using_constants: ...
+(* 
+ ->nrel_output;;
+ ->concept_monitor_screen;;
+ ->concept_device;;
+ ->concept_graphics_view;;
+ ->nrel_conversion;;
+ ->nrel_fit_form;;
+*);;
+*);;
+
+
+//utverjdenie
+statement ->...
+(*
+->rrel_key_sc_element: concept_graphics_card;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[видеокарты разделяются на дискретные видеокарты,гибридные решения, встроенные нрафические процессоры, внешние процессоры и GPGPU](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Утверждение(Видеокарта)](*<- lang_ru;;*);;
+=> nrel_using_constants: ...
+(* 
+->concept_GPGPU;;
+->concept_hybrid_solutions;;
+->concept_discrete_graphics_card;;
+->concept_integrated_graphics_processors;;
+->concept_external_graphics_card;;
+*);;
+*);;
+
+//inclusion
+concept_device =>nrel_inclusion:concept_graphics_card;;
+
+
+//primer
+concept_graphics_card                        ->concept_Inno_3D_GeForce_RTX_2080_Ti;;
+concept_Inno_3D_GeForce_RTX_2080_Ti          ->..card;;
+..card                                       => nrel_number:602_V336_03SB1234567890;;
+concept_serial_number                        ->602_V336_03SB1234567890;;  
+*]

@@ -1,0 +1,91 @@
+laba_1 =[*
+sc_node_not_relation -> concept_circle;;
+sc_node_not_relation -> concept_segment;;
+sc_node_not_relation ->concept_geometrycal_point;;
+sc_node_not_relation ->concept_length;;
+sc_node_not_relation ->concept_5;;
+sc_node_not_relation ->concept_13;;
+sc_node_not_relation -> concept_25;;
+sc_node_not_relation ->..concept_AM_length;;
+sc_node_not_relation ->..concept_MB_length;;
+sc_node_not_relation ->concept_uncalculated_value;;
+sc_node_not_relation ->..concept_answer;;
+
+
+
+
+
+
+
+sc_node_norole_relation ->nrel_circle_center;;
+sc_node_norole_relation ->nrel_endpoint;;
+sc_node_norole_relation ->nrel_radius;;
+sc_node_norole_relation ->nrel_inner_point;;
+sc_node_norole_relation ->nrel_chord;;
+sc_node_norole_relation ->nrel_product_of_quantities;;
+
+
+
+
+
+
+//length
+concept_lenght          ->concept_25;;
+concept_lenght          ->concept_13;;
+concept_lenght          ->..concept_AM_length;;
+concept_lenght          ->..concept_MB_length;;
+concept_lenght          ->..concept_answer;;
+concept_lenght          ->concept_5;;
+
+
+
+//points
+concept_geometrycal_point       ->M;;
+concept_geomentrical_point      ->O;;
+concept_geomentrical_point      ->A;;
+concept_geomentrical_point      ->B;;
+
+
+//segment
+concept_segment     ->MB;;
+concept_segment     ->AM;;
+concept_segment     ->OM;;
+concept_segment     ->..radius;;
+
+//endpoints
+OM          =>nrel_endpoint:O;;
+OM          =>nrel_endpoint:M;;
+
+MB          =>nrel_endpoint:M;;
+MB          =>nrel_endpoint:B;;
+
+AM          =>nrel_endpoint:A;;
+AM          =>nrel_endpoint:M;;
+
+AB          =>nrel_endpoint:A;;
+AB          =>nrel_endpoint:B;;
+
+//circle
+concept_circle           ->l;;
+L                        =>nrel_chord:AB;;
+L                        =>nrel_inner_point:M;;
+L                        =>nrel_circle_center:O;;
+L                        =>nrel_radius:..radius;;
+
+
+//numbers
+concept_5       ->OM;;
+concept_25      ->AB;;
+concept_13      ->..radius;;
+
+
+
+
+//final
+concept_uncalculated_value  ->..concept_answer;;
+..concept_answer<=nrel_product_of_quantities:{
+    ..concept_AM_length;
+    ..concept_MB_length
+};;
+
+*]
