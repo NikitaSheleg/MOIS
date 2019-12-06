@@ -13,19 +13,12 @@ sc_node_not_relation ->..concept_answer;;
 
 
 
-
-
-
-
 sc_node_norole_relation ->nrel_circle_center;;
 sc_node_norole_relation ->nrel_endpoint;;
 sc_node_norole_relation ->nrel_radius;;
 sc_node_norole_relation ->nrel_inner_point;;
 sc_node_norole_relation ->nrel_chord;;
 sc_node_norole_relation ->nrel_product_of_quantities;;
-
-
-
 
 
 
@@ -88,4 +81,4 @@ concept_uncalculated_value  ->..concept_answer;;
     ..concept_MB_length
 };;
 
-*]
+*];;

@@ -70,4 +70,4 @@ concept_graphics_card                        ->concept_Inno_3D_GeForce_RTX_2080_
 concept_Inno_3D_GeForce_RTX_2080_Ti          ->..card;;
 ..card                                       => nrel_number:602_V336_03SB1234567890;;
 concept_serial_number                        ->602_V336_03SB1234567890;;  
-*]
+*];;
